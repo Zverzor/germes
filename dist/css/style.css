@@ -857,7 +857,10 @@ h6 {
 }
 
 .top {
-  margin-bottom: 7.5rem;
+  padding-bottom: 7.5rem;
+  background-color: #f8f8f8;
+  padding-top: 1.875rem;
+  border-top: 1px solid rgba(153, 153, 153, 0.3);
 }
 
 .top__body {
@@ -1077,7 +1080,6 @@ h6 {
   -webkit-transition: all 0.4s ease 0s;
   -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
-  z-index: -2;
 }
 
 .block-top__item h3 {
@@ -1088,6 +1090,8 @@ h6 {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.75rem;
+  position: relative;
+  z-index: 2;
 }
 
 .block-top__item h4 {
@@ -1097,6 +1101,8 @@ h6 {
   color: #fff;
   font-weight: 700;
   text-transform: uppercase;
+  position: relative;
+  z-index: 2;
 }
 
 .block-top__item:hover img {
@@ -1115,7 +1121,7 @@ h6 {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
-  z-index: -1;
+  z-index: 1;
   opacity: 0;
   -webkit-transition: all 0.4s ease 0s;
   -o-transition: all 0.4s ease 0s;
@@ -1123,7 +1129,9 @@ h6 {
 }
 
 .boxes {
-  margin-bottom: 7.5rem;
+  padding-bottom: 7.5rem;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid rgba(153, 153, 153, 0.3);
 }
 
 .boxes__body {
@@ -1230,6 +1238,62 @@ h6 {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.benefits {
+  padding-bottom: 7.5rem;
+  padding-top: 7.5rem;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid rgba(153, 153, 153, 0.3);
+}
+
+.benefits__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.benefits__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
+}
+
+.item-benefits__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.item-benefits__icon {
+  margin-bottom: 0.9375rem;
+}
+
+.item-benefits__icon svg path {
+  fill: #bb6447;
+}
+
+.item-benefits__label {
+  margin-bottom: 0.625rem;
+}
+
+.item-benefits__label h3 {
+  color: #222;
+  font-size: 1rem;
+}
+
+.item-benefits__descr {
+  text-align: center;
 }
 
 /**
@@ -2064,7 +2128,6 @@ button.swiper-pagination-bullet {
   }
 
   .col-item-boxes__body {
-    max-height: 400px;
     padding: 0.625rem 1.25rem;
   }
 
@@ -2086,6 +2149,10 @@ button.swiper-pagination-bullet {
 
   .col-item-boxes__list {
     margin-left: 0rem;
+    margin-bottom: 0rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
   }
 }
 
@@ -2334,7 +2401,7 @@ button.swiper-pagination-bullet {
   }
 
   .top {
-    margin-bottom: 4.375rem;
+    padding-bottom: 4.375rem;
   }
 
   .top__body {
@@ -2360,7 +2427,7 @@ button.swiper-pagination-bullet {
   }
 
   .boxes {
-    margin-bottom: 4.375rem;
+    padding-bottom: 4.375rem;
   }
 
   .item-boxes__body {
@@ -2368,6 +2435,14 @@ button.swiper-pagination-bullet {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
+  .benefits {
+    padding-bottom: 4.375rem;
+    padding-top: 4.375rem;
   }
 }
 
@@ -2382,7 +2457,7 @@ button.swiper-pagination-bullet {
   }
 
   .top {
-    margin-bottom: 3.125rem;
+    padding-bottom: 3.125rem;
   }
 
   .top__body {
@@ -2424,7 +2499,44 @@ button.swiper-pagination-bullet {
   }
 
   .boxes {
-    margin-bottom: 3.125rem;
+    padding-bottom: 3.125rem;
+  }
+
+  .benefits {
+    padding-bottom: 3.125rem;
+    padding-top: 3.125rem;
+  }
+}
+
+@media (max-width: 43.75em) {
+  .benefits__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .benefits__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+
+  .benefits__item:not(:last-child) {
+    margin-bottom: 1.875rem;
+  }
+
+  .item-benefits__body {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .item-benefits__descr {
+    text-align: start;
   }
 }
 
