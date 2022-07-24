@@ -342,9 +342,9 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all 0.4s ease 0s;
-  -o-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
   height: 100%;
 }
 
@@ -470,9 +470,9 @@ h6 {
           box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
   margin: -20px -20px;
   border-radius: 5px;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.1s ease-out 0s;
+  -o-transition: all 0.1s ease-out 0s;
+  transition: all 0.1s ease-out 0s;
   opacity: 0;
   visibility: hidden;
 }
