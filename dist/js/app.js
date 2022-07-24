@@ -3679,6 +3679,28 @@
                 prevEl: ".top-main-slider-prev",
                 nextEl: ".top-main-slider-next"
             },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    width: auto
+                },
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    width: 890
+                },
+                992: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    width: 1200
+                },
+                1268: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    width: 1200
+                }
+            },
             on: {}
         });
     }
